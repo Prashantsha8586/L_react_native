@@ -1,5 +1,6 @@
 import {
   SafeAreaView,
+  ScrollView,
   StyleSheet,
   Text,
   useColorScheme,
@@ -16,12 +17,14 @@ const App = () => {
     //   backgroundColor: isDarkMode ? "black" : "white"
     // }]}>
 
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.text}>rocky bhai</Text>
-      <Pressable>
-        <Text>Press me </Text>
-      </Pressable>
-    </SafeAreaView>
+    <ScrollView contentContainerStyle={{gap: 10}} horizontal>
+      <SafeAreaView style={styles.container}>
+        <Text style={styles.text}>rocky bhai</Text>
+        <Pressable>
+          <Text>Press me </Text>
+        </Pressable>
+      </SafeAreaView>
+    </ScrollView>
   );
 };
 
