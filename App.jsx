@@ -1,46 +1,34 @@
 import {
+  Button,
+  FlatList,
+  Image,
   SafeAreaView,
   ScrollView,
   StyleSheet,
   Text,
+  TextInput,
   useColorScheme,
   View,
 } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
+import Home from './src/screens/Home';
+import Profile from './src/screens/Profile';
 
 const App = () => {
-  const theme = useColorScheme();
-  const isDarkMode = theme === 'dark';
+
 
   return (
-    // <SafeAreaView style={[styles.container, {
-    //   backgroundColor: isDarkMode ? "black" : "white"
-    // }]}>
-
-    <ScrollView contentContainerStyle={{gap: 10}} horizontal>
-      <SafeAreaView style={styles.container}>
-        <Text style={styles.text}>rocky bhai</Text>
-        <Pressable>
-          <Text>Press me </Text>
-        </Pressable>
-      </SafeAreaView>
-    </ScrollView>
+    // --------Stack navigation---------------
+    <View>
+      <Text>App</Text>
+      <Home/>
+      <Profile/>
+    </View>
   );
 };
 
 export default App;
 
 const styles = StyleSheet.create({
-  container: {
-    width: '100%',
-    height: '100%',
-    backgroundColor: 'yellow',
-  },
-  button: {
-    paddingHorizontal: 10,
-  },
 
-  text: {
-    color: isDarkMode ? 'white' : 'black',
-  },
 });
