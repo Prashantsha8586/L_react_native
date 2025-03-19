@@ -1,34 +1,15 @@
-import {
-  Button,
-  FlatList,
-  Image,
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  useColorScheme,
-  View,
-} from 'react-native';
-import React, { useState } from 'react';
-import Home from './src/screens/Home';
-import Profile from './src/screens/Profile';
+import {StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import HomeScreen from './src/screens/HomeScreen';
 
 const App = () => {
-
-
   return (
-    // --------Stack navigation---------------
     <View>
-      <Text>App</Text>
-      <Home/>
-      <Profile/>
+      <HomeScreen />
     </View>
   );
 };
 
 export default App;
 
-const styles = StyleSheet.create({
-
-});
+const styles = StyleSheet.create({});
